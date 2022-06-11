@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+ 
+    <!-- Add google font 
+      Bungee
+      Source Sans Pro light 300 italic 
+      SemiBold 600 italic
+    Css rules: 
+    font-family: 'Bungee', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+    add Timeago CDN-->
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+  href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+  rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="styles/layout.css" type="text/css">
+    <link rel="stylesheet" href="styles/nav.css" type="text/css">
+    <link rel="stylesheet" href="styles/header.css" type="text/css">
+    <link rel="stylesheet" href="styles/new-tweet.css" type="text/css">
+    <link rel="stylesheet" href="styles/existing-tweet.css" type="text/css">
+
+    <!-- External JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- App JS -->
+    <script defer type="text/javascript" src="./scripts/client.js" ></script>
+    <script type="text/javascript" src="./scripts/composer-char-counter.js"></script>
+  </head>
+
+  <body>
+    <!-- Top nav bar (fixed) -->
+    <nav>
+      <span class="tweeter-head">tweeter</span> 
+       <span class="column">
+         <span>
+           <b>Write</b> a new tweet
+         </span>
+         <i class="fa-solid fa-angles-down"></i>
+        </span>  
+    </nav>
+    <section id="app-container">
+          <header id="header-of-the-page">
+            <div class="avatar">
+              <img src="./images/profile-hex.png" id="header-image">
+            </div>
+            <br>
+            <div class="avatar-name">
+              <h2>Donna Huang</h2>
+            </div>
+          </header>
+          
+          <!-- Page-specific (main) content here -->
+          <main class="container">
+            <section class="new-tweet">
+              <div id="error-message">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <p id="error-p"></p>
+                <i class="fa-solid fa-triangle-exclamation"></i>
+              </div>
+              <form action="/tweets" method="POST" id="submit-button">
+                <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
+                <div class="tweet-footer">
+                  <button type="submit" class="submit-tweet-button">Tweet</button>
+                  <output name="counter" class="counter" for="tweet-text" id="counter-number">140</output>
+                </div>
+              </form>
+            </section>
+            <!-- tweets-contaniter section -->
+            <section id="tweets-container">
+            </section>
+          </main>
+    </section>
+
+  </body>
+</html>

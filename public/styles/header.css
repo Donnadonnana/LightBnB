@@ -1,0 +1,35 @@
+@media only screen and (min-width:1024px) {
+  #header-of-the-page {
+      margin-top: 5em;
+      margin-left: 5em;
+      margin-right: 5em;
+      margin-bottom: 5em;
+      flex: 1;
+      background-color: palevioletred;
+      background-image: url(../images/diagmonds-light.png);
+      background-repeat: repeat;
+      height: 450px;
+      width: 450px;
+    }
+}
+
+@media only screen and (max-width:768px){
+  #header-of-the-page {
+      background-color: palevioletred;
+      background-image: url(../images/diagmonds-light.png);
+      background-repeat: repeat;
+      height: 450px;  
+    }
+}
+.avatar{
+  display: flex;
+  justify-content:center;
+}
+
+.avatar-name{
+  display: flex;
+  justify-content: center;
+} 
+#header-image{
+  margin-top: 20px;
+}

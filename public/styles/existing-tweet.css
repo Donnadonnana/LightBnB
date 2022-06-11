@@ -1,0 +1,31 @@
+.existing-tweet{
+  display: flex;
+  padding: 15px;
+  border: 5px solid rgb(83, 82, 82);
+  width: 100%;
+  margin-bottom: 30px;
+
+}
+.existing-tweet-article{
+width: 100%;
+}
+#tweets-container{
+  display:flex;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+.existing-tweet-footer{
+  display: flex;
+  padding: 10px;
+  border-top:5px solid rgb(83, 82, 82);
+  width: 100%;
+  font-size: medium;
+  justify-content: space-between;
+
+}   
+.fa-solid{
+  color: rgb(68, 85, 160);
+}
+.fa-solid:hover{
+color:pink;
+}
